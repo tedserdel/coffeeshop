@@ -1,0 +1,195 @@
+span {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+header button {
+    font-weight: bold;
+    width: 180px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+footer {
+    background-image: blue;
+    padding: 96px 0;
+}
+
+a i {
+    padding-right: 16px;
+}
+
+.login-button i {
+    padding-right: 6px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.hero-section {
+    position: relative;
+    height: 90vh;
+    width: 100vw;
+    background: url('https://images.unsplash.com/photo-1567880905822-56f8e06fe630?q=80&w=2835&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero-cta {
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-cta button {
+    margin-bottom: 12px;
+}
+
+.footer-contact i {
+    padding-right: 12px;
+}
+
+.navbar-toggler {
+    outline: none; /* Remove outline */
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove box shadow if present */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+button:focus {
+    outline: none;
+}
+
+.modal-content {
+    padding: 20px; /* Increase padding around the modal content */
+    border: none; /* Remove border from modal content */
+    box-shadow: none; /* Optional: Remove box shadow */
+}
+
+.modal-body {
+    padding: 20px; /* Increase padding inside the modal body */
+}
+
+.modal-body .form-group {
+    margin-bottom: 20px; /* Increase margin bottom for form elements */
+}
+
+.modal-footer {
+    padding: 20px; /* Increase padding in the modal footer */
+    border: none; /* Remove border from modal content */
+    box-shadow: none; /* Optional: Remove box shadow */
+}
+
+
+.modal-header, .modal-footer {
+    border-bottom: none; /* Remove bottom border from header and footer */
+}
+
+.card-body {
+    padding: 20px; /* Optional: Add padding to card body */
+}
+
+.btn-block {
+    width: 100%;
+}
+
+main {
+    position: relative;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 84px;
+    margin-bottom: 84px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the entire card without stretching */
+    min-height: 200px; /* Adjust minimum height as needed */
+    max-height: 300px; /* Adjust maximum height as needed */
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+    color: #fff; /* Text color */
+    padding: 20px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .card-overlay {
+    opacity: 1; /* Show on hover */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+.card-text {
+    font-size: 1rem; /* Adjust font size */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .card-img-top {
+        min-height: 150px; /* Adjust minimum height for smaller screens */
+        max-height: 200px; /* Adjust maximum height for smaller screens */
+    }
+}
