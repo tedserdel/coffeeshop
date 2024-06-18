@@ -10,6 +10,11 @@ header button {
     margin-right: 6px;
 }
 
+header p {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
 footer {
     background-image: blue;
     padding: 96px 0;
@@ -142,7 +147,7 @@ main {
     height: auto;
     object-fit: cover; /* Ensures the image covers the entire card without stretching */
     min-height: 200px; /* Adjust minimum height as needed */
-    max-height: 300px; /* Adjust maximum height as needed */
+    max-height: 400px; /* Adjust maximum height as needed */
 }
 
 .card-overlay {
@@ -167,11 +172,11 @@ main {
 }
 
 .card-title {
-    font-size: 1.5rem; /* Adjust font size */
+    font-size: 1.5rem;
 }
 
 .card-text {
-    font-size: 1rem; /* Adjust font size */
+    font-size: 1rem;
 }
 
 /* Media queries for responsive design */
@@ -192,4 +197,15 @@ main {
         min-height: 150px; /* Adjust minimum height for smaller screens */
         max-height: 200px; /* Adjust maximum height for smaller screens */
     }
+}
+
+.btn-outline-primary {
+    color: white;
+    border-color: white;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #0F65C9;
+    border-color: #0F65C9;
 }

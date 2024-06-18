@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" />
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/brands.css" />
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/solid.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
     <title>Luke & Amado Cafe</title>
 
@@ -80,8 +80,65 @@
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer justify-content-end">
-                        <button type="button" class="btn btn-lg btn-primary">Login</button>
+                    <div class="row">
+                        <div class="col text-end">
+                            <button type="button" class="btn btn-lg btn-primary">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- reserve modal -->
+    <div class="modal fade" id="reserveModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Reserve Table</h3>
+                    <button class="btn bg-white" data-bs-dismiss="modal">
+                        <i class="fa fa-xl fa-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+
+
+                            <div class="row mb-3">
+                                <label for="numberOfSeats" class="col-sm-6 col-form-label">Number of Seats</label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <select class="form-control" id="numberOfSeats" name="numberOfSeats">
+                                        <option value="select" selected>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="date" class="col-sm-6 col-form-label">Date</label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <input class="form-control" type="date" id="date" name="date">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="time" class="col-sm-6 col-form-label">Time</label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <input class="form-control" type="time" id="time" name="time">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-end">
+                                    <button type="button" class="btn btn-lg btn-primary">Search</button>
+                                </div>
+                            </div>
+
+
+                        </form>
                     </div>
                 </div>
             </div>
@@ -96,8 +153,8 @@
                 <p>Fresh coffee, healthy snacks and delicious sandwiches. What are you in for today?</p>
                 <!-- cta buttons here -->
                 <div class="d-flex hero-cta">
-                    <button class="btn btn-lg btn-primary text-white me-2" type="button">Pick-Up</button>
-                    <button class="btn btn-lg btn-primary text-white" type="button">Delivery</button>
+                    <button class="btn btn-lg btn-outline-primary text-white me-2" type="button" data-bs-toggle="modal" data-bs-target="#reserveModal">Reserve table</button>
+                    <button class="btn btn-lg btn-primary text-white" type="button">See menu</button>
                 </div>
             </div>
         </section>
